@@ -219,6 +219,17 @@ a {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
+.article-body mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+.article-body mjx-container[display="true"] {
+  margin: 24px 0;
+  padding-bottom: 2px;
+}
+
 .archive-list {
   display: grid;
   gap: 30px;
