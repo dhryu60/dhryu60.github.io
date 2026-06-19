@@ -12,23 +12,36 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Create Post File
-        run: |
-          TITLE="${{ github.event.issue.title }}"
-          # 파일명에 사용할 날짜 및 제목 정제
-          DATE=$(date +'%Y-%m-%d')
-          FILE_NAME_TITLE=$(echo "$TITLE" | sed 's/[^a-zA-Z0-9가-힣]/-/g' | tr '[:upper:]' '[:lower:]')
-          FILE_NAME="_posts/${DATE}-${FILE_NAME_TITLE}.md"
-          
-          mkdir -p _posts
-          
-          # Issue 본문 내용을 파일로 저장
-          echo "${{ github.event.issue.body }}" > $FILE_NAME
+      - name: Create Post File safely
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            const title = context.payload.issue.title;
+            const body = context.payload.issue.body;
+            
+            // 파일명에 불가능한 특수문자 전면 제거 및 공백을 대시(-)로 변환
+            const cleanTitle = title
+              .replace(/[^a-zA-Z0-9가-힣\s]/g, '')
+              .trim()
+              .replace(/\s+/g, '-');
+              
+            const date = new Date().toISOString().split('T')[0];
+            const fileName = `${date}-${cleanTitle}.md`;
+            const dirPath = path.join(process.env.GITHUB_WORKSPACE, '_posts');
+            
+            if (!fs.existsSync(dirPath)){
+                fs.mkdirSync(dirPath, { recursive: true });
+            }
+            
+            fs.writeFileSync(path.join(dirPath, fileName), body, 'utf8');
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _posts/
-          git commit -m "Create post from issue #${{ github.event.issue.number }}"
+          git commit -m "Create post from issue #${{ github.event.issue.number }}" || echo "No changes to commit"
           git push
