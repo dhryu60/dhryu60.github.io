@@ -8,5 +8,5 @@ title: 홈
 ## 최신 게시글 목록
 
 {% for post in site.posts %}
-* [{{ post.title }}]({{ post.url | relative_url }}) — *{{ post.date | date: "%Y-%m-%d" }}*
+- [{{ post.title }}]({{ post.url | relative_url }}) ({{ post.date | date: "%Y-%m-%d" }})
 {% endfor %}
