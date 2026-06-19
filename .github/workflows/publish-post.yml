@@ -2,7 +2,10 @@ name: Publish Post from Issue
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, labeled]
+
+permissions:
+  contents: write
 
 jobs:
   publish:
@@ -20,7 +23,7 @@ jobs:
             const path = require('path');
             
             const title = context.payload.issue.title;
-            const body = context.payload.issue.body;
+            const body = context.payload.issue.body || '';
             
             // 파일명에 불가능한 특수문자 전면 제거 및 공백을 대시(-)로 변환
             const cleanTitle = title
@@ -35,8 +38,13 @@ jobs:
             if (!fs.existsSync(dirPath)){
                 fs.mkdirSync(dirPath, { recursive: true });
             }
+
+            const hasFrontMatter = body.trimStart().startsWith('---');
+            const postContent = hasFrontMatter
+              ? body
+              : `---\ntitle: ${JSON.stringify(title)}\ndate: ${date}\n---\n\n${body}`;
             
-            fs.writeFileSync(path.join(dirPath, fileName), body, 'utf8');
+            fs.writeFileSync(path.join(dirPath, fileName), postContent, 'utf8');
 
       - name: Commit and Push Changes
         run: |

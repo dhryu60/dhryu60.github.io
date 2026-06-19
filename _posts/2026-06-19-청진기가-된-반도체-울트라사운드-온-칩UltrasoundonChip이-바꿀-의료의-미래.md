@@ -2,7 +2,7 @@
 title: "청진기가 된 반도체, 울트라사운드 온 칩(Ultrasound-on-Chip™)이 바꿀 의료의 미래"
 date: 2026-06-19
 tags: [cmut, cmos, ultrasound, beamforming, semiconductor]
-description: "버터플라이 네트워크(Butterfly Network)의 '울트라사운드 온 칩(Ultrasound-on-Chip™)' 기술이 기존 압전 크리스탈(Piezoelectric Crystal) 방식을 대체하며 의료 진단의 패러다임을 바꾸고 있습니다. 반도체 공정(CMOS) 기반의 CMUT 기술과 온칩 빔포밍, 초광대역 주파수 제어를 통해 구현되는 소형화 및 의료 대중화의 통찰을 신문 칼럼 스타일로 짚어봅니다.".
+description: "버터플라이 네트워크(Butterfly Network)의 '울트라사운드 온 칩(Ultrasound-on-Chip™)' 기술이 기존 압전 크리스탈(Piezoelectric Crystal) 방식을 대체하며 의료 진단의 패러다임을 바꾸고 있습니다. 반도체 공정(CMOS) 기반의 CMUT 기술과 온칩 빔포밍, 초광대역 주파수 제어를 통해 구현되는 소형화 및 의료 대중화의 통찰을 신문 칼럼 스타일로 짚어봅니다."
 ---
 
 ## 청진기가 된 반도체, 울트라사운드 온 칩(Ultrasound-on-Chip™)이 바꿀 의료의 미래
