@@ -219,13 +219,15 @@ a {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
-.article-body mjx-container {
+.article-body mjx-container,
+.article-body .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
 }
 
-.article-body mjx-container[display="true"] {
+.article-body mjx-container[display="true"],
+.article-body .katex-display {
   margin: 24px 0;
   padding-bottom: 2px;
 }

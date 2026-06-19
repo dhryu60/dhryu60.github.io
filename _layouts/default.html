@@ -6,37 +6,26 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
     <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']],
-          processEscapes: true
-        },
-        options: {
-          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        },
-        startup: {
-          typeset: false,
-          pageReady: function () {
-            return MathJax.startup.defaultPageReady().then(function () {
-              return MathJax.typesetPromise([document.querySelector('.article-body') || document.body]);
-            });
-          }
-        }
-      };
-
-      window.loadMathJaxFallback = function () {
-        if (window.MathJax && window.MathJax.startup && window.MathJax.startup.document) {
+      window.renderBlogMath = function () {
+        if (!window.renderMathInElement) {
           return;
         }
-        var fallback = document.createElement('script');
-        fallback.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.min.js';
-        fallback.defer = true;
-        document.head.appendChild(fallback);
+        renderMathInElement(document.querySelector('.article-body') || document.body, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '\\[', right: '\\]', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false }
+          ],
+          ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+          throwOnError: false
+        });
       };
     </script>
-    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" onerror="loadMathJaxFallback()"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" onload="renderBlogMath()"></script>
   </head>
   <body>
     <header class="site-header">
