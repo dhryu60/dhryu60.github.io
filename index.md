@@ -7,10 +7,6 @@ title: 홈
 
 ## 최신 게시글 목록
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> — <i>{{ post.date | date: "%Y-%m-%d" }}</i>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+* [{{ post.title }}]({{ post.url | relative_url }}) — *{{ post.date | date: "%Y-%m-%d" }}*
+{% endfor %}
