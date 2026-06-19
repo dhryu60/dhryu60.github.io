@@ -15,10 +15,28 @@
         },
         options: {
           skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        startup: {
+          typeset: false,
+          pageReady: function () {
+            return MathJax.startup.defaultPageReady().then(function () {
+              return MathJax.typesetPromise([document.querySelector('.article-body') || document.body]);
+            });
+          }
         }
       };
+
+      window.loadMathJaxFallback = function () {
+        if (window.MathJax && window.MathJax.startup && window.MathJax.startup.document) {
+          return;
+        }
+        var fallback = document.createElement('script');
+        fallback.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.min.js';
+        fallback.defer = true;
+        document.head.appendChild(fallback);
+      };
     </script>
-    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" onerror="loadMathJaxFallback()"></script>
   </head>
   <body>
     <header class="site-header">
