@@ -1,3 +1,11 @@
+---
+title: "STM의 tof 센서 라인업"
+date: 2026-06-19
+tags: [...]
+categories: [...]
+description: "..."
+---
+
 # STM의 ToF 센서 라인업 분석: 초소형 거리 측정부터 High-Resolution 3D dToF까지
 
 모바일 카메라의 레이저 오토포커스(Laser AF)부터 로봇의 자율주행(SLAM), 스마트 홈의 재실 감지까지, 현대 임베디드 시스템에서 거리 측정과 공간 인식의 중요성이 날로 커지고 있다. ST마이크로일렉트로닉스(STMicroelectronics)는 FlightSense™ 기술을 바탕으로 Time-of-Flight(ToF) 센서 시장을 선도하고 있다. 
