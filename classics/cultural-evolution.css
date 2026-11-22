@@ -1,0 +1,51 @@
+.reading-hero { padding-block: clamp(2.8rem, 7vw, 6rem); background: #edf0e9; border-bottom: 1px solid var(--line) }
+.reading-hero h1 { font-size: clamp(2.7rem, 6vw, 5.2rem); line-height: 1.3; margin: 1rem 0 1.5rem; letter-spacing: -.055em }
+.reading-deck { font: 1.2rem/1.9 var(--serif); color: var(--soft) }
+.reading-meta { margin-top: 1.8rem; font-size: .9rem; color: var(--soft) }
+.reading-layout { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; padding-block: 3.5rem 5rem }
+.reading-toc { position: sticky; top: 2rem; font-size: .94rem; line-height: 1.7 }
+.reading-toc nav > p { font-weight: 700; color: var(--pine); padding-bottom: .8rem; border-bottom: 1px solid var(--line) }
+.reading-toc ol { list-style: none; padding: 0; margin: .8rem 0 1.5rem }
+.reading-toc li + li { margin-top: .65rem }
+.reading-toc a { display: inline-block; padding-block: .2rem; text-decoration: none }
+.reading-toc a:hover { text-decoration: underline }
+.reading-toc .download { color: var(--soft); text-decoration: underline }
+.reading-body { min-width: 0; font-size: 1.0625rem; line-height: 1.95 }
+.reading-body p { margin: 0 0 1.3rem }
+.reading-body h2 { margin: 3.5rem 0 1.8rem; padding-top: 2rem; border-top: 1px solid var(--line); font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.5 }
+.reading-body h3 { font-size: 1.25rem; line-height: 1.65; margin: 2.2rem 0 1rem; color: var(--pine) }
+.reading-body :is(h2, h3) { scroll-margin-top: 1.5rem }
+.reading-body strong { color: var(--pine) }
+.reading-body a { color: #78502d; text-decoration-thickness: 1px }
+.reading-body :is(ul, ol) { padding-inline-start: 1.5rem; margin-block: 1rem 1.6rem }
+.reading-body li + li { margin-top: .65rem }
+.table-scroll { overflow-x: auto; margin: 1.8rem 0; border: 1px solid var(--line); border-radius: 3px }
+.table-scroll table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .94rem; line-height: 1.8 }
+.table-scroll caption { text-align: left; padding: .85rem 1rem; font-weight: 700; background: #edf0e9 }
+.table-scroll :is(th, td) { text-align: left; padding: 1rem; vertical-align: top; border-top: 1px solid var(--line) }
+.table-scroll th { background: #f0f2eb; color: var(--pine) }
+.table-scroll :is(th, td):first-child { width: 20% }
+@media (max-width: 900px) {
+  .reading-layout { grid-template-columns: 1fr; gap: 2rem; padding-top: 2rem }
+  .reading-toc { position: static }
+  .reading-toc ol { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem 1.5rem }
+  .reading-toc li + li { margin-top: 0 }
+}
+@media (max-width: 520px) {
+  .reading-toc ol { grid-template-columns: 1fr; gap: .5rem }
+  .reading-hero h1 { font-size: 2.65rem }
+  .reading-deck { font-size: 1.05rem }
+  .reading-body { font-size: 1rem; line-height: 1.95 }
+}
+@media print {
+  :root { background: white; color: black; font-size: 11pt }
+  .mast, .reading-toc, footer, .skip { display: none }
+  .wrap { width: 100% }
+  .reading-layout { display: block; padding: 0 }
+  .reading-hero { background: none; padding: 1rem 0 2rem }
+  .reading-hero h1 { font-size: 30pt }
+  .reading-body :is(h2, h3) { break-after: avoid }
+  .table-scroll { overflow: visible }
+  .table-scroll table { min-width: 0 }
+  .table-scroll tr { break-inside: avoid }
+}

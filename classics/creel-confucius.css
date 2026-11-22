@@ -1,0 +1,20 @@
+.reading-hero h1 { font-size: clamp(2.25rem, 5vw, 4.4rem); }
+.reading-body section { scroll-margin-top: 1.5rem; }
+.reading-body > section:first-child > h2 { margin-top: 0; padding-top: 0; border-top: 0; }
+.comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.evidence { padding: 1.4rem; border: 1px solid var(--line); border-radius: 4px; min-width: 0; background: #fff; }
+.evidence-original { border-top: 4px solid #285e53; }
+.interpretation { border-top: 4px solid #a36b35; background: #f5f1e8; }
+.reading-body .evidence-label { font-size: .875rem; font-weight: 700; line-height: 1.8; margin-bottom: .8rem; }
+.reading-body .evidence h3 { margin: 0 0 1rem; }
+.evidence blockquote { margin: 0 0 1.2rem; padding: .75rem 0; font: 1.5rem/1.8 var(--serif); color: var(--pine); }
+.reading-body .source-note { font-size: .875rem; line-height: 1.8; color: var(--soft); }
+.evidence p:last-child, .reading-note p:last-child { margin-bottom: 0; }
+.reading-note, .editorial { padding: 1.2rem 1.4rem; border-left: 3px solid #76877d; background: #edf0e9; margin-block: 1.5rem; }
+.reading-note ul { margin-bottom: 0; }
+.source-list li { scroll-margin-top: 2rem; }
+.source-list li:target { background: #e9eddf; outline: 2px solid #bbc7b4; outline-offset: 5px; }
+footer { border-top: 1px solid var(--line); padding-block: 2rem; color: var(--soft); font-size: .875rem; }
+@media (max-width: 1100px) { .comparison { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .evidence, .reading-note, .editorial { padding: 1rem; } }
+@media print { .comparison { display: block; } .evidence { margin-bottom: 1rem; } }

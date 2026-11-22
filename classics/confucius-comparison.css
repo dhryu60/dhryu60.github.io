@@ -1,0 +1,38 @@
+.reading-hero h1 { font-size: clamp(2.3rem, 5vw, 4.4rem) }
+.compare-body { padding-block: 2rem 4rem; font-size: 1rem; line-height: 1.9 }
+.compare-body p { margin: 0 0 1rem }
+.compare-body h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 1.5rem 0 }
+.compare-body h3 { font-size: 1.25rem; line-height: 1.6; margin-bottom: 1rem }
+.compare-body a { color: #78502d }
+.scope { padding: 1rem 1.25rem; border: 1px solid var(--line); background: #edf0e9 }
+summary { cursor: pointer; font-weight: 700; padding-block: .35rem }
+details[open] > summary { margin-bottom: 1rem }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 1.5rem 0; font-size: .875rem; color: var(--soft) }
+.topic-controls { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.5rem 0 .75rem }
+.topic-controls[hidden], .topic[hidden] { display: none }
+.topic-controls button { font: inherit; padding: .65rem 1rem; background: transparent; color: var(--pine); border: 1px solid #7e8f86; border-radius: 4px; cursor: pointer }
+.topic-controls button[aria-pressed="true"] { background: var(--pine); color: white }
+.topic-controls button:hover { box-shadow: 0 0 0 1px var(--pine) }
+.canonical { border-left: 4px solid var(--pine); padding: 1.25rem 1.5rem; background: #edf0e9; margin: 1.5rem 0 }
+.type-label { font-size: .875rem; font-weight: 700; color: var(--soft) }
+blockquote { margin: .8rem 0 1rem; font: 1.25rem/1.8 var(--serif) }
+.canonical blockquote { font-size: 1.8rem }
+.era-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: stretch }
+.era-card { padding: 1.2rem; border: 1px solid var(--line); border-top: 4px solid #8c6d46; background: #fff; min-width: 0; font-family: inherit; display: flex; flex-direction: column }
+.era-card.song { border-top-color: #3a5a6b }
+.era-card.qing { border-top-color: #4a6b53 }
+.era-card.dasan { border-top-color: #6b527c; background: #f8f5fa }
+.era-card.creel { border-top-color: #9a4733; background: #f8f2e8 }
+.era-card details { border-block: 1px solid var(--line); margin: .4rem 0 1rem; padding-block: .4rem }
+.source-note { font-size: .875rem; line-height: 1.8; color: var(--soft) }
+.era-card > .source-note:last-child { margin-top: auto; margin-bottom: 0; padding-top: .8rem }
+.limit { padding: .8rem; background: #efe8db; font-size: .875rem }
+.editorial { border-left: 3px solid #7c8e80; padding: 1.3rem 1.5rem; margin: 1.5rem 0 3rem; background: #edf0e9 }
+.editorial p { margin-bottom: 0 }
+.sources { border-top: 1px solid var(--line); padding-top: 1rem }
+.sources li { margin-bottom: 1rem }
+footer { border-top: 1px solid var(--line); padding-block: 2rem; color: var(--soft); font-size: .875rem }
+@media (min-width: 1500px) { .compare-body { width: min(96rem, 94%) } .era-grid { grid-template-columns: repeat(5, minmax(0, 1fr)) } }
+@media (max-width: 1100px) { .era-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
+@media (max-width: 600px) { .era-grid { grid-template-columns: 1fr } .bar { flex-wrap: wrap; padding-block: 1rem } .canonical, .editorial { padding: 1rem } .topic-controls button { flex: 1 1 auto } }
+@media print { .topic-controls, #comparison-status { display: none } .topic[hidden] { display: block } .era-grid { grid-template-columns: 1fr 1fr } .era-card { break-inside: avoid } }

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: 홈
+title: 기술 블로그
+permalink: /blog/
 ---
 
 <h1 class="sr-only">송정의 기술 블로그에 오신 것을 환영합니다.</h1>
@@ -61,7 +62,7 @@ title: 홈
     <section class="sidebar-section">
       <h2>다시보기</h2>
       <ul class="link-list">
-        <li><a href="{{ '/' | relative_url }}">전체 글</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">전체 글</a></li>
         <li><a href="{{ site.github.repository_url | default: 'https://github.com/dhryu60/dhryu60.github.io' }}">GitHub 저장소</a></li>
         <li><a href="https://github.com/dhryu60/dhryu60.github.io/wiki">Wiki</a></li>
       </ul>

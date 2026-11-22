@@ -1,0 +1,24 @@
+J.S. Bach — Gottes Zeit ist die allerbeste Zeit, BWV 106: 1. Sonatina
+Organ arrangement: Alexandre Guilmant
+Performer and recording publisher: Ralph Looij, 2022
+Recording: Reil organ, Ermelo, Hauptwerk
+
+License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Source: IMSLP, recording #815098 (uploaded by Ralph Looij on 2022-10-09)
+https://imslp.org/wiki/Special:ReverseLookup/815098
+https://imslp.org/wiki/Gottes_Zeit_ist_die_allerbeste_Zeit,_BWV_106_(Bach,_Johann_Sebastian)
+
+Original file:
+https://ks15.imslp.org/files/imglnks/usimg/b/b1/IMSLP815098-PMLP149635--YT2mp3.info-_-_Bach_-_Sonatina_from_BWV_106_-_Reil_organ,_Ermelo,_Hauptwerk_(320kbps).mp3
+
+Local filename: bwv106_sonatina.mp3
+Changes: filename only. Original audio bytes are unchanged; no trimming or transcoding.
+SHA-256: D8AAC208F265B3CA1753A1ACD74C0095B88656CBE23CC90419259CF47797F455
+Downloaded and license checked: 2026-11-17
+
+This recording is used as background music in a noncommercial digital archive.
+Retain attribution and the license link when redistributing the recording.
+Commercial use is not covered by this license. Adaptations of the recording must
+be shared under the same license. No endorsement by the performer is implied.
