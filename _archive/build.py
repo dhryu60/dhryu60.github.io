@@ -61,4 +61,7 @@ for t in topics:
     others = ''.join(f'<a href="/topics/{o["id"]}.html">{o["title"]}</a>' for o in topics if o != t)
     content = f'''<main id="main" class="topic-page {t['color']}"><nav class="breadcrumb" aria-label="현재 위치"><a href="/index.html">독락당</a><span>/</span><a href="/index.html#topics">주제별 탐색</a><span>/</span><span aria-current="page">{t['title']}</span></nav><section class="topic-intro"><div><p class="eyebrow">{t['category']}</p><h1>{t['title']}</h1><p class="topic-lead">{t['intro']}</p><p>{t['desc']}</p></div><span class="topic-han" aria-hidden="true">{t['han']}</span></section><section class="resources"><h2>이 서가에서 읽을 수 있는 것</h2>{links}</section><section class="other-topics"><h2>다른 서가도 만나보세요</h2><div>{others}</div></section></main>'''
     (OUT / 'topics' / (t['id'] + '.html')).write_text(document(t['title'], content), encoding='utf-8')
+if 'cosmos' in ids:
+    from cosmos_page import build_cosmos
+    build_cosmos(OUT, document)
 print(f'Built archive and {len(topics)} topic pages in {OUT}.')

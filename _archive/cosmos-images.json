@@ -1,0 +1,92 @@
+[
+  {
+    "id": "earthrise",
+    "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/climate/2023/12/August-2013_1920x1200.jpg",
+    "source": "https://science.nasa.gov/resource/image-earthrise/",
+    "credit": "NASA / Bill Anders",
+    "license": "NASA Images and Media Usage Guidelines",
+    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "alt": "달의 회색 지평선 위 검은 우주에 떠 있는 푸른 지구",
+    "caption": "지구돋이. 1968년 아폴로 8호에서 바라본 지구는 우리가 함께 살아가는 세계를 돌아보게 한다.",
+    "width": 1280,
+    "height": 800
+  },
+  {
+    "id": "mars",
+    "chapter": "chapter-5",
+    "image_url": "https://science.nasa.gov/wp-content/uploads/2024/07/pia26368-perseverance-finds-a-rock-with-leopard-spots-annotated.jpg",
+    "source": "https://science.nasa.gov/resource/perseverance-finds-a-rock-with-leopard-spots/",
+    "credit": "NASA/JPL-Caltech",
+    "license": "NASA Images and Media Usage Guidelines",
+    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "alt": "화성 체야바 폭포 암석에서 표범 무늬와 감람석 위치를 표시한 주석 사진",
+    "caption": "2024년 퍼서비어런스가 관측한 체야바 폭포 암석. 표범 무늬의 생물학적 기원 여부는 추가 검증이 필요하다. 사진의 주석은 원본에 포함되어 있다.",
+    "width": 1600,
+    "height": 1165
+  },
+  {
+    "id": "titan",
+    "chapter": "chapter-6",
+    "image_url": "https://media.esa.int/legacy/web/images/esa_multimedia/images/2005/01/first_colour_view_of_titan_s_surface/10156754-2-eng-GB/First_colour_view_of_Titan_s_surface.png",
+    "source": "https://www.esa.int/media/first-colour-view-of-titan-s-surface",
+    "credit": "ESA/NASA/JPL/University of Arizona",
+    "license": "ESA Standard Licence",
+    "license_url": "https://www.esa.int/terms-and-conditions/terms-and-conditions-for-images-and-videos",
+    "alt": "하위헌스가 촬영한 주황빛 타이탄 지표에 흩어진 둥근 자갈 모양 물체들",
+    "caption": "2005년 하위헌스가 보내온 타이탄의 표면. 분광 자료를 반영해 색을 처리한 관측 이미지로, 눈앞의 물체는 자갈 크기다.",
+    "width": 546,
+    "height": 693
+  },
+  {
+    "id": "pillars",
+    "chapter": "chapter-9",
+    "image_url": "https://cdn.esawebb.org/archives/images/screen/weic2216a.jpg",
+    "source": "https://esawebb.org/images/weic2216a/",
+    "credit": "NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI).",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "alt": "별이 가득한 공간 속에서 황금빛과 갈색의 가스와 먼지가 기둥처럼 솟은 창조의 기둥",
+    "caption": "창조의 기둥. 2022년 공개된 제임스 웹 우주망원경의 근적외선 관측을 색으로 표현한 영상으로, 가스와 먼지 속 별의 탄생을 보여준다.",
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "id": "cmb",
+    "chapter": "chapter-10",
+    "image_url": "https://media.esa.int/legacy/web/images/esa_multimedia/images/2013/03/planck_cmb/12583930-4-eng-GB/Planck_CMB.jpg",
+    "source": "https://www.esa.int/media/planck-cmb-en-374995",
+    "credit": "ESA and the Planck Collaboration",
+    "license": "CC BY-SA 3.0 IGO",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+    "alt": "타원형 전천 지도에 파랑과 붉은색으로 표현된 우주 마이크로파 배경 복사의 온도 차이",
+    "caption": "플랑크의 우주배경복사 지도. 초기 우주의 흔적에서 측정한 미세한 온도 차이를 색으로 나타낸 데이터 지도다.",
+    "width": 1600,
+    "height": 800
+  },
+  {
+    "id": "record",
+    "chapter": "chapter-11",
+    "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/v/voyager_record20171201-16-1.jpg",
+    "source": "https://science.nasa.gov/resource/voyager-golden-record/",
+    "credit": "NASA/JPL-Caltech",
+    "license": "NASA Images and Media Usage Guidelines",
+    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "alt": "재생 방법이 새겨진 보호 덮개와 보이저의 금빛 음반이 나란히 놓인 모습",
+    "caption": "보이저 골든 레코드와 보호 덮개. 지구의 소리와 모습을 담아 우주로 보낸 기록은 우리가 무엇을 남길 것인지 묻게 한다.",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "pale-blue-dot",
+    "chapter": "questions",
+    "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia23/pia23645/PIA23645.jpg",
+    "source": "https://science.nasa.gov/photojournal/pale-blue-dot-revisited/",
+    "credit": "NASA/JPL-Caltech",
+    "license": "NASA Images and Media Usage Guidelines",
+    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "alt": "검은 우주를 가로지르는 빛줄기 안에 아주 작은 밝은 점으로 보이는 지구",
+    "caption": "창백한 푸른 점. 1990년 보이저 1호가 촬영한 지구의 2020년 재처리 영상이다. 사진 속 빛줄기는 카메라 내부에서 산란된 태양빛이다.",
+    "width": 1280,
+    "height": 1266
+  }
+]
